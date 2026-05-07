@@ -76,8 +76,8 @@ public abstract class ADbContext(DbContextOptions options, string[]? primaryKeys
 
             var clrType = entry.Entity.GetType();
 
-            var hasHistory = clrType.GetCustomAttribute<TrackHistoryAttribute>() != null;
-            if (!hasHistory) continue;
+            //var hasHistory = clrType.GetCustomAttribute<TrackHistoryAttribute>() != null;
+            //if (!hasHistory) continue;
 
             var keyProp = entry.Properties.FirstOrDefault(p => p.Metadata.IsPrimaryKey());
             if (keyProp == null) continue;
@@ -112,8 +112,8 @@ public abstract class ADbContext(DbContextOptions options, string[]? primaryKeys
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.Entity<HistoryEntry<int>>().ToTable("History_Int");
-        modelBuilder.Entity<HistoryEntry<Guid>>().ToTable("History_Guid");
+        //modelBuilder.Entity<HistoryEntry<int>>().ToTable("History_Int");
+        //modelBuilder.Entity<HistoryEntry<Guid>>().ToTable("History_Guid");
 
         // Применяем все конфигурации из сборки
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
@@ -122,17 +122,17 @@ public abstract class ADbContext(DbContextOptions options, string[]? primaryKeys
         {
             var clrType = entityType.ClrType;
 
-            var isAuditable = clrType.GetCustomAttribute<AuditableAttribute>() != null;
+            //var isAuditable = clrType.GetCustomAttribute<AuditableAttribute>() != null;
 
-            if (isAuditable)
-            {
-                modelBuilder.Entity(clrType).Property<DateTimeOffset>("CreatedAt");
-                modelBuilder.Entity(clrType).Property<DateTimeOffset?>("ModifiedAt");
-            }
+            //if (isAuditable)
+            //{
+            //    modelBuilder.Entity(clrType).Property<DateTimeOffset>("CreatedAt");
+            //    modelBuilder.Entity(clrType).Property<DateTimeOffset?>("ModifiedAt");
+            //}
 
-            // 2. Concurrency
-            if (typeof(IConcurrency).IsAssignableFrom(clrType))
-                modelBuilder.Entity(clrType).Property<byte[]>("RowVersion").IsRowVersion();
+            //// 2. Concurrency
+            //if (typeof(IConcurrency).IsAssignableFrom(clrType))
+            //    modelBuilder.Entity(clrType).Property<byte[]>("RowVersion").IsRowVersion();
 
             //// 3. Soft Delete
             //if (typeof(ISoftDeletable).IsAssignableFrom(clrType) ||
