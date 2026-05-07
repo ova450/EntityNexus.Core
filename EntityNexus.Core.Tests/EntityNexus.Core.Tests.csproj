@@ -32,6 +32,6 @@
     <None Remove="Infrastructure\**" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EntityNexus.Core.Abstractions\EntityNexus.Core.Abstractions.csproj" />
+    <ProjectReference Include="..\EntityNexus.Core\EntityNexus.Core.csproj" />
   </ItemGroup>
 </Project>

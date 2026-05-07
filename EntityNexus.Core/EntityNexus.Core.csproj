@@ -35,6 +35,6 @@
     <Folder Include="Infrastructure\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EntityNexus.Core.Domain\EntityNexus.Core.DomainModel.csproj" />
+    <ProjectReference Include="..\EntityNexus.Core.DomainModel\EntityNexus.Core.DomainModel.csproj" />
   </ItemGroup>
 </Project>

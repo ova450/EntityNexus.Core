@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="Core/EntityNexus.Core.Abstractions/EntityNexus.Core.Abstractions.csproj" Id="e1b13876-4b95-4f3b-98c5-535fa8f787e4" />
-  <Project Path="Core/EntityNexus.Core.Domain/EntityNexus.Core.DomainModel.csproj" Id="67869071-8b2c-4f0b-b9b7-911059c8a1cf" />
-  <Project Path="Core/EntityNexus.Core.Tests/EntityNexus.Core.Tests.csproj" Id="7133090d-466b-4586-9e25-e0132ed59627" />
+  <Project Path="EntityNexus.Core.DomainModel/EntityNexus.Core.DomainModel.csproj" />
+  <Project Path="EntityNexus.Core.Tests/EntityNexus.Core.Tests.csproj" />
+  <Project Path="EntityNexus.Core/EntityNexus.Core.csproj" />
 </Solution>
