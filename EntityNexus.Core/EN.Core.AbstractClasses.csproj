@@ -3,16 +3,16 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyName>EntityNexus.Core</AssemblyName>
-    <RootNamespace>EntityNexus.DomainModel.Abstractions</RootNamespace>
-    <PackageId>EntityNexus.Core</PackageId>
+    <AssemblyName>EN.Core.AbstractClasses</AssemblyName>
+    <RootNamespace>EntityNexus</RootNamespace>
+    <PackageId>EntityNexus.Core.AbstractClasses</PackageId>
     <Authors>ovaataaridotru</Authors>
     <PackageTags>entity; orm; domain; dsl; framework</PackageTags>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <LangVersion>preview</LangVersion>    
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
 
-    <Description>DSL Runtime Interfaces for EntityNexus DSL Framework. This package provides the core interfaces for building domain models.</Description>
+    <Description>DSL Runtime Abstract Classes for EntityNexus DSL Framework. This package provides the core abstract classesfor building domain models.</Description>
 
     <RepositoryUrl>https://github.com/ova450/EntityNexus.Core</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -32,11 +32,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Infrastructure\" />
+    <Folder Include="Infrastructure.AbstractClasses.Core\" />
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\EntityNexus.Core.DomainModel\EntityNexus.Core.DomainModel.csproj" />
+    <ProjectReference Include="..\EntityNexus.Core.DomainModel\EN.Core.Interfaces.csproj" />
   </ItemGroup>
   
 </Project>

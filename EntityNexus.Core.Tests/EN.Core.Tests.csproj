@@ -3,28 +3,37 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyName>EntityNexus.Core.DomainModel</AssemblyName>
-    <RootNamespace>EntityNexus.Core.DomainModel.Interfaces</RootNamespace>
-    <PackageId>EntityNexus.Core.DomainModel</PackageId>
+    <AssemblyName>EN.Core.Tests</AssemblyName>
+    <RootNamespace>EntityNexus.Tests.Core</RootNamespace>
+    <PackageId>EntityNexus.Core.Tests</PackageId>
     <Authors>ovaataaridotru</Authors>
     <PackageTags>entity; orm; domain; dsl; framework</PackageTags>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <LangVersion>preview</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    
-    <Description>DSL Runtime Abstract Classes for EntityNexus DSL Framework. This package provides the core abstract classes for building domain models.</Description>
+
+    <Description>Tests domain models for EntityNexus DSL Framework.</Description>
 
     <RepositoryUrl>https://github.com/ova450/EntityNexus.Core</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    
+    <OutputType>Exe</OutputType>
+
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
-  
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <NoWarn>1701;1702</NoWarn>
   </PropertyGroup>
-  
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EntityNexus.Core\EN.Core.AbstractClasses.csproj" />
+  </ItemGroup>
+
 </Project>

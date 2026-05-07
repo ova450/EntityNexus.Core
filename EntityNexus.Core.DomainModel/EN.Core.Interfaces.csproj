@@ -3,28 +3,28 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyName>EntityNexus.Core.Tests</AssemblyName>
-    <RootNamespace>EntityNexus.Core.Tests</RootNamespace>
-    <PackageId>EntityNexus.Core.Tests</PackageId>
+    <AssemblyName>EN.Core.Interfaces</AssemblyName>
+    <RootNamespace>EntityNexus.DomainModel.Interfaces.Core</RootNamespace>
+    <PackageId>EntityNexus.Core.Interfaces</PackageId>
     <Authors>ovaataaridotru</Authors>
     <PackageTags>entity; orm; domain; dsl; framework</PackageTags>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <LangVersion>preview</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-
-    <Description>Tests domain models for EntityNexus DSL Framework.</Description>
+    
+    <Description>DSL Runtime Interfaces for EntityNexus DSL Framework. This package provides the core interfaces for building domain models.</Description>
 
     <RepositoryUrl>https://github.com/ova450/EntityNexus.Core</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-
+    
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
-
+  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <NoWarn>1701;1702</NoWarn>
   </PropertyGroup>
-
+  
 </Project>
