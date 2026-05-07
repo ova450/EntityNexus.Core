@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>EntityNexus.Domain</RootNamespace>
+    <AssemblyName>EntityNexus.Core.Domain</AssemblyName>
+    <PackageId>EntityNexus.Core.Domain</PackageId>
+    <Authors>ovaataaridotru</Authors>
+    <PackageTags>entity; orm; domain; dsl; framework</PackageTags>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <LangVersion>preview</LangVersion>
+    <Title>EntityNexus.Core.Domain</Title>
+    
+    <Description>DSL Runtime Interfaces And Abstract Classes for EntityNexus DSL Framework. This package provides the core abstractions and interfaces for building domain models and implementing domain services within the EntityNexus framework. It includes essential components for defining entities, value objects, aggregates, repositories, and domain events, enabling developers to create robust and maintainable domain-driven applications.</Description>
+
+    <RepositoryUrl>https://github.com/ova450/EntityNexus.Core</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702</NoWarn>
+  </PropertyGroup>
+  
+</Project>

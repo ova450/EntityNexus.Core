@@ -1,5 +1,4 @@
-
-namespace EntityNexus.DomainModel;
+namespace EntityNexus.Domain;
 
 /// <summary>
 /// Маркерный интерфейс для сущностей, имеющих родителя.

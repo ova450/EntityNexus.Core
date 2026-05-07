@@ -1,6 +1,6 @@
 using EntityNexus.Additionals;
 using EntityNexus.Additionals.History;
-using EntityNexus.DomainModel;
+using EntityNexus.Domain;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 

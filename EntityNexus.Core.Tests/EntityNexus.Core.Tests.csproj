@@ -1,9 +1,40 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <RootNamespace>EntityNexus.Domain</RootNamespace>
+    <AssemblyName>EntityNexus.Core.Domain</AssemblyName>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>EntityNexus.Core.Domain</PackageId>
+    <Version>10.7.0</Version>
+    <Authors>ovaataaridotru</Authors>
+    <PackageTags>entity; orm; core; interfaces</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Nullable>enable</Nullable>
+    <Title>EntityNexus.Core.Domain</Title>
+    <PackageOutputPath>..\EntityNexus.Core\Packages</PackageOutputPath>
+    <DocumentationFile>..\EntityNexus.Core\Domain.Documents.10.7.0.xml</DocumentationFile>
   </PropertyGroup>
-
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="DomainService\**" />
+    <Compile Remove="Infrastructure\**" />
+    <EmbeddedResource Remove="DomainService\**" />
+    <EmbeddedResource Remove="Infrastructure\**" />
+    <None Remove="DomainService\**" />
+    <None Remove="Infrastructure\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntityNexus.Core.Abstractions\EntityNexus.Core.Abstractions.csproj" />
+  </ItemGroup>
 </Project>

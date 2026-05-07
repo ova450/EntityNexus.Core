@@ -1,4 +1,4 @@
-using EntityNexus.DomainModel;
+using EntityNexus.Domain;
 
 namespace EntityNexus.Abstractions.Domain.Model;
 

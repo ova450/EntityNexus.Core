@@ -1,4 +1,4 @@
-namespace EntityNexus.DomainModel;
+namespace EntityNexus.Domain;
 
 /// <summary>
 /// Базовый интерфейс сущности.

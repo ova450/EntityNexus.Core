@@ -24,10 +24,17 @@
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="DomainService\**" />
+    <EmbeddedResource Remove="DomainService\**" />
+    <None Remove="DomainService\**" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.7" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DomainService\" />
     <Folder Include="Infrastructure\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntityNexus.Core.Domain\EntityNexus.Core.DomainModel.csproj" />
   </ItemGroup>
 </Project>
