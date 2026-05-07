@@ -3,38 +3,40 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RootNamespace>EntityNexus.Abstractions</RootNamespace>
-    <AssemblyName>EntityNexus.Core.Abstractions</AssemblyName>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageId>EntityNexus.Core.Abstractions</PackageId>
-    <Version>10.7.0</Version>
+    <AssemblyName>EntityNexus.Core</AssemblyName>
+    <RootNamespace>EntityNexus.DomainModel.Abstractions</RootNamespace>
+    <PackageId>EntityNexus.Core</PackageId>
     <Authors>ovaataaridotru</Authors>
-    <PackageTags>entity; orm; core; interfaces</PackageTags>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Nullable>enable</Nullable>
-    <Title>EntityNexus.Core.Abstractions</Title>
-    <PackageOutputPath>..\EntityNexus.Core\Packages</PackageOutputPath>
-    <DocumentationFile>..\EntityNexus.Core\Abstractions.Documents.10.7.0.xml</DocumentationFile>
+    <PackageTags>entity; orm; domain; dsl; framework</PackageTags>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <LangVersion>preview</LangVersion>    
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+
+    <Description>DSL Runtime Interfaces for EntityNexus DSL Framework. This package provides the core interfaces for building domain models.</Description>
+
+    <RepositoryUrl>https://github.com/ova450/EntityNexus.Core</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
   </PropertyGroup>
+  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
+  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <NoWarn>1701;1702;1591</NoWarn>
+    <NoWarn>1701;1702</NoWarn>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Remove="DomainService\**" />
-    <EmbeddedResource Remove="DomainService\**" />
-    <None Remove="DomainService\**" />
-  </ItemGroup>
+  
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.7" />
   </ItemGroup>
+
   <ItemGroup>
     <Folder Include="Infrastructure\" />
   </ItemGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\EntityNexus.Core.DomainModel\EntityNexus.Core.DomainModel.csproj" />
   </ItemGroup>
+  
 </Project>

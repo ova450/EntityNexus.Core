@@ -3,35 +3,28 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RootNamespace>EntityNexus.Domain</RootNamespace>
-    <AssemblyName>EntityNexus.Core.Domain</AssemblyName>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageId>EntityNexus.Core.Domain</PackageId>
-    <Version>10.7.0</Version>
+    <AssemblyName>EntityNexus.Core.Tests</AssemblyName>
+    <RootNamespace>EntityNexus.Core.Tests</RootNamespace>
+    <PackageId>EntityNexus.Core.Tests</PackageId>
     <Authors>ovaataaridotru</Authors>
-    <PackageTags>entity; orm; core; interfaces</PackageTags>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Nullable>enable</Nullable>
-    <Title>EntityNexus.Core.Domain</Title>
-    <PackageOutputPath>..\EntityNexus.Core\Packages</PackageOutputPath>
-    <DocumentationFile>..\EntityNexus.Core\Domain.Documents.10.7.0.xml</DocumentationFile>
+    <PackageTags>entity; orm; domain; dsl; framework</PackageTags>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <LangVersion>preview</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <Description>Tests domain models for EntityNexus DSL Framework.</Description>
+
+    <RepositoryUrl>https://github.com/ova450/EntityNexus.Core</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
   </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <NoWarn>1701;1702;1591</NoWarn>
+    <NoWarn>1701;1702</NoWarn>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Remove="DomainService\**" />
-    <Compile Remove="Infrastructure\**" />
-    <EmbeddedResource Remove="DomainService\**" />
-    <EmbeddedResource Remove="Infrastructure\**" />
-    <None Remove="DomainService\**" />
-    <None Remove="Infrastructure\**" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EntityNexus.Core\EntityNexus.Core.csproj" />
-  </ItemGroup>
+
 </Project>
