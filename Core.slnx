@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="EntityNexus.Core.DomainModel/EN.Core.Interfaces.csproj" />
-  <Project Path="EntityNexus.Core.Tests/EN.Core.Samples.csproj" />
-  <Project Path="EntityNexus.Core/EN.Core.AbstractClasses.csproj" />
+  <Project Path="EN.Core.AbstractClasses/EN.Core.AbstractClasses.csproj" />
+  <Project Path="EN.Core.Interfaces/EN.Core.Interfaces.csproj" />
+  <Project Path="EN.Core.Samples/EN.Core.Samples.csproj" />
 </Solution>

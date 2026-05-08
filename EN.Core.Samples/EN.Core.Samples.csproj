@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EntityNexus.Core\EN.Core.AbstractClasses.csproj" />
+    <ProjectReference Include="..\EN.Core.AbstractClasses\EN.Core.AbstractClasses.csproj" />
   </ItemGroup>
 
 </Project>

@@ -38,9 +38,9 @@
   <ItemGroup>
     <Folder Include="Infrastructure.AbstractClasses.Core\" />
   </ItemGroup>
-  
+
   <ItemGroup>
-    <ProjectReference Include="..\EntityNexus.Core.DomainModel\EN.Core.Interfaces.csproj" />
+    <ProjectReference Include="..\EN.Core.Interfaces\EN.Core.Interfaces.csproj" />
   </ItemGroup>
   
 </Project>
