@@ -1,78 +1,76 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using static EntityNexus.Samples.Core.Domain;
 
-namespace EntityNexus.Samples.Core
+namespace EntityNexus.Samples.Core;
+
+/// <summary>
+/// Демонстрационная программа (точка входа), показывающая базовое использование EntityNexus Core:
+/// создание сущностей, работа с иерархией, сохранение в EF Core.
+/// </summary>
+internal class Program
 {
     /// <summary>
-    /// Пример консольного приложения, демонстрирующего работу EntityNexus Core:
-    /// создание сущностей, работа с иерархией, сохранение в базу через EF Core.
+    /// Главная точка входа в консольное приложение.
     /// </summary>
-    internal class Program
+    /// <param name="args">Аргументы командной строки.</param>
+    /// <returns>Task для асинхронного выполнения.</returns>
+    private static async Task Main(string[] args)
     {
-        /// <summary>
-        /// Точка входа в демонстрационное приложение.
-        /// </summary>
-        /// <param name="args">Аргументы командной строки (не используются).</param>
-        /// <returns>Task для асинхронного выполнения.</returns>
-        private static async Task Main(string[] args)
+        var services = new ServiceCollection();
+
+        services.AddDbContext<ShopDbContext>(opt =>
+            opt.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=ENM_Sample_11;Trusted_Connection=True;"));
+
+        var provider = services.BuildServiceProvider();
+
+        using var scope = provider.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<ShopDbContext>();
+
+        // Подготовка базы данных
+        await db.Database.EnsureDeletedAsync();
+        await db.Database.EnsureCreatedAsync();
+
+        // 1. Создаем пользователя
+        User user = new("John");
+        user.Rename("Tom");
+
+        // 2. Создаем продукт
+        var product = new Product("Laptop")
         {
-            var services = new ServiceCollection();
+            Price = 1000,
+            Stock = 5
+        };
 
-            services.AddDbContext<ShopDbContext>(opt =>
-                opt.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=ENM_Sample_11;Trusted_Connection=True;"));
+        db.AddRange(user, product);
 
-            var provider = services.BuildServiceProvider();
+        user.Rename("Gary");
 
-            using var scope = provider.CreateScope();
-            var db = scope.ServiceProvider.GetRequiredService<ShopDbContext>();
+        await db.SaveChangesAsync();
 
-            // Подготовка базы
-            await db.Database.EnsureDeletedAsync();
-            await db.Database.EnsureCreatedAsync();
+        // 3. Создаем заказ
+        var order = new Order
+        {
+            Parent = user,
+            TotalAmount = product.Price,
+            Children =
+            [
+                new OrderItem("Laptop")
+                {
+                    Quantity = 1,
+                    Price = product.Price
+                }
+            ]
+        };
 
-            // 1. Создаем пользователя
-            User user = new("John");
-            user.Rename("Tom");
+        product.Stock -= 1;
 
-            // 2. Создаем продукт
-            var product = new Product("Laptop")
-            {
-                Price = 1000,
-                Stock = 5
-            };
+        db.Orders.Add(order);
 
-            db.AddRange(user, product);
+        product.Rename("New Name");
+        product.Price = 200;
 
-            user.Rename("Gary");
+        await db.SaveChangesAsync();
 
-            await db.SaveChangesAsync();
-
-            // 3. Создаем заказ
-            var order = new Order
-            {
-                Parent = user,
-                TotalAmount = product.Price,
-                Children =
-                [
-                    new OrderItem("Laptop")
-                    {
-                        Quantity = 1,
-                        Price = product.Price
-                    }
-                ]
-            };
-
-            product.Stock -= 1;
-
-            db.Orders.Add(order);
-
-            product.Rename("New Name");
-            product.Price = 200;
-
-            await db.SaveChangesAsync();
-
-            Console.WriteLine("Done");
-        }
+        Console.WriteLine("Done");
     }
 }
