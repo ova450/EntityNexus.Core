@@ -3,9 +3,9 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyName>EN.Core.Tests</AssemblyName>
-    <RootNamespace>EntityNexus.Tests.Core</RootNamespace>
-    <PackageId>EntityNexus.Core.Tests</PackageId>
+    <AssemblyName>EN.Core.Samples</AssemblyName>
+    <RootNamespace>EntityNexus.Samples.Core</RootNamespace>
+    <PackageId>EntityNexus.Core.Samples</PackageId>
     <Authors>ovaataaridotru</Authors>
     <PackageTags>entity; orm; domain; dsl; framework</PackageTags>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>

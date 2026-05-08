@@ -28,6 +28,10 @@
   </PropertyGroup>
   
   <ItemGroup>
+    <Compile Remove="Infrastructure.AbstractClasses.Core\EntityTypeBuilderExtensions.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.7" />
   </ItemGroup>
 

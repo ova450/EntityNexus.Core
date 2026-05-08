@@ -1,15 +1,26 @@
+
 namespace EntityNexus.DomainModel.Interfaces.Core
 {
     /// <summary>
-    /// Интерфейс для сущностей, имеющих обязательное имя.
+    /// Интерфейс для сущностей, которые обязательно имеют имя.
     /// </summary>
-    public interface IEntityNamed<TKey> : IEntity<TKey>    where TKey : IEquatable<TKey>
+    /// <typeparam name="TKey">Тип первичного ключа сущности.</typeparam>
+    public interface IEntityNamed<TKey> : IEntity<TKey> where TKey : IEquatable<TKey>
     {
+        /// <summary>
+        /// Название/имя сущности.
+        /// </summary>
         string Name { get; set; }
     }
 
     /// <summary>
-    /// Упрощённая версия для int-ключа.
+    /// Упрощённая версия <see cref="IEntityNamed{TKey}"/> с ключом типа <see cref="int"/>.
     /// </summary>
-    public interface IEntityNamed : IEntity;
+    public interface IEntityNamed : IEntity
+    {
+        /// <summary>
+        /// Название/имя сущности.
+        /// </summary>
+        string Name { get; set; }
+    }
 }
