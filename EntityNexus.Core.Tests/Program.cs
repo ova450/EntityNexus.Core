@@ -19,7 +19,7 @@ internal class Program
         var services = new ServiceCollection();
 
         services.AddDbContext<ShopDbContext>(opt =>
-            opt.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=ENM_Sample_11;Trusted_Connection=True;"));
+            opt.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=ENM_Sample_14;Trusted_Connection=True;"));
 
         var provider = services.BuildServiceProvider();
 
