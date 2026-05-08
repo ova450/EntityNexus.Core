@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 
 namespace EntityNexus.Samples.Core;
 
@@ -18,8 +19,12 @@ internal class Program
     {
         var services = new ServiceCollection();
 
-        services.AddDbContext<ShopDbContext>(opt =>
-            opt.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=ENM_Sample_16;Trusted_Connection=True;"));
+        var connectionString = Environment.GetEnvironmentVariable("ConnectionStrings__DefaultConnection")
+    ?? "Server=(localdb)\\mssqllocaldb;Database=ENM_Sample_17;Trusted_Connection=True;";
+
+        //options.UseSqlServer(connectionString);
+
+        services.AddDbContext<ShopDbContext>(opt => opt.UseSqlServer(connectionString));
 
         var provider = services.BuildServiceProvider();
 
