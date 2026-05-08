@@ -1,5 +1,4 @@
-# .github/workflows/ci.yml
-
+# .github/workflows/CI.yml
 name: CI
 
 on:
@@ -36,6 +35,12 @@ jobs:
         with:
           dotnet-version: 9.0.x
 
+      # ←←←← ЭТОТ ШАГ БЫЛ ОТСУТСТВУЕТ — ИЗ-ЗА НЕГО ПАДАЕТ
+      - name: Install EF Core Tools
+        run: |
+          dotnet tool install --global dotnet-ef
+          echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+
       - name: Restore
         run: dotnet restore
 
@@ -43,7 +48,7 @@ jobs:
         run: dotnet build --no-restore --configuration Release
 
       - name: Run migrations
-        run: dotnet ef database update
+        run: dotnet ef database update --verbose
         env:
           ConnectionStrings__DefaultConnection: >
             Server=localhost,1433;
