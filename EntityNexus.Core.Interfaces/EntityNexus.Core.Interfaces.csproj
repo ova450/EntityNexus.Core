@@ -3,9 +3,9 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyName>EN.Core.Interfaces</AssemblyName>
-    <RootNamespace>EntityNexus.DomainModel.Interfaces.Core</RootNamespace>
+    <AssemblyName>EntityNexus.Core.Interfaces</AssemblyName>
     <PackageId>EntityNexus.Core.Interfaces</PackageId>
+    <RootNamespace>EntityNexus.DomainModel.Interfaces.Core</RootNamespace>
     <Authors>ovaataaridotru</Authors>
     <PackageTags>entity; orm; domain; dsl; framework</PackageTags>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>

@@ -3,9 +3,9 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyName>EN.Core.Samples</AssemblyName>
-    <RootNamespace>EntityNexus.Samples.Core</RootNamespace>
+    <AssemblyName>EntityNexus.Core.Samples</AssemblyName>
     <PackageId>EntityNexus.Core.Samples</PackageId>
+    <RootNamespace>EntityNexus.Samples.Core</RootNamespace>
     <Authors>ovaataaridotru</Authors>
     <PackageTags>entity; orm; domain; dsl; framework</PackageTags>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EN.Core.AbstractClasses\EN.Core.AbstractClasses.csproj" />
+    <ProjectReference Include="..\EntityNexus.Core.AbstractClasses\EntityNexus.Core.AbstractClasses.csproj" />
   </ItemGroup>
 
 </Project>
