@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Элементы решения/">
+    <File Path=".docs/Images/Onion-arch.drawio" />
+  </Folder>
   <Project Path="EntityNexus.Core.AbstractClasses/EntityNexus.Core.AbstractClasses.csproj" />
   <Project Path="EntityNexus.Core.Interfaces/EntityNexus.Core.Interfaces.csproj" />
   <Project Path="EntityNexus.Core.Samples/EntityNexus.Core.Samples.csproj" />

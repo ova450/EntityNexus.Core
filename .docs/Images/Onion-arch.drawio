@@ -1,0 +1,49 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36">
+  <diagram name="РЎС‚СЂР°РЅРёС†Р°-1" id="hmxFaDnIw7kPndURzqMo">
+    <mxGraphModel dx="940" dy="630" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="LQShfiCY1GfFjt2Dgltj-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="500" width="500" x="10" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="M4U6ujKQrcT9hKNjRCYx-16" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;verticalAlign=top;spacingBottom=0;spacingTop=15.748;fontSize=16;fontFamily=Verdana;fillColor=#A680B8;gradientColor=#FFCCFF;strokeColor=#996185;strokeWidth=3;gradientDirection=north;labelBorderColor=none;fontStyle=0;spacing=2;autosizeText=0;fontColor=#99004D;" value="Infrastructure" vertex="1">
+          <mxGeometry height="480" width="480" x="20" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="M4U6ujKQrcT9hKNjRCYx-15" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;verticalAlign=top;spacingBottom=0;spacingTop=19.685;fontSize=14;fontFamily=Verdana;fillColor=#FFFF99;gradientColor=none;strokeColor=#CC0000;strokeWidth=3;fontColor=#CC0000;fontStyle=1" value="Application Services" vertex="1">
+          <mxGeometry height="400" width="400" x="60" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="M4U6ujKQrcT9hKNjRCYx-14" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;verticalAlign=top;spacingBottom=0;spacingTop=19.685;fontSize=14;fontFamily=Verdana;strokeWidth=3;strokeColor=#CC0000;fillColor=#FFFF66;fontStyle=1;fontColor=#CC0000;" value="Domain Services" vertex="1">
+          <mxGeometry height="320" width="320" x="100" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="M4U6ujKQrcT9hKNjRCYx-13" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;verticalAlign=top;spacingBottom=0;spacingTop=12;fontSize=14;fontFamily=Verdana;fontStyle=1;fontColor=#CC0000;strokeColor=#CC0000;strokeWidth=2;fillColor=#FFFF33;" value="Domain Model" vertex="1">
+          <mxGeometry height="240" width="240" x="140" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="M4U6ujKQrcT9hKNjRCYx-12" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=14;fontFamily=Verdana;fontStyle=1;strokeWidth=2;strokeColor=#CC0000;fillColor=#ffcd28;gradientColor=none;fontColor=#CC0000;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="220" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="LQShfiCY1GfFjt2Dgltj-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontFamily=Verdana;labelBackgroundColor=none;fillColor=#FF0000;fontColor=#FFFFFF;labelBorderColor=none;strokeColor=#FFFFFF;fontStyle=2;opacity=60;" value="Application Core Layer" vertex="1">
+          <mxGeometry height="24" width="385.82599999999996" x="67.09" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="LQShfiCY1GfFjt2Dgltj-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontFamily=Verdana;labelBackgroundColor=none;fillColor=#FF0000;fontColor=#FFFFFF;labelBorderColor=none;strokeColor=#FFFFFF;fontStyle=2;opacity=60;" value="Domain Layer" vertex="1">
+          <mxGeometry height="24" width="300" x="110" y="311.02299999999997" as="geometry" />
+        </mxCell>
+        <mxCell id="h9HJGTaDxVgTHBAcGmG--1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;fontFamily=Verdana;fontStyle=0;fontColor=#99004D;horizontal=0;" value="UI" vertex="1">
+          <mxGeometry height="30" width="60" x="10" y="294" as="geometry" />
+        </mxCell>
+        <mxCell id="h9HJGTaDxVgTHBAcGmG--2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;fontFamily=Verdana;fontStyle=0;fontColor=#99004D;horizontal=0;direction=east;" value="Tests" vertex="1">
+          <mxGeometry height="30" width="60" x="450" y="294" as="geometry" />
+        </mxCell>
+        <mxCell id="-78Pkdc0r1nQ_2zKXfNb-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=27;fontColor=#000000;fontStyle=1;textShadow=1;" value="OFDC: onion-aСЂС…РёС‚РµРєС‚СѓСЂР°" vertex="1">
+          <mxGeometry height="30" width="650" x="170" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="x7mZ9pcJEFznlzCYgc-q-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontFamily=Verdana;labelBackgroundColor=none;fillColor=#FF0000;fontColor=#FFFFFF;labelBorderColor=none;strokeColor=#FFFFFF;fontStyle=2;opacity=60;" value="Application Layer" vertex="1">
+          <mxGeometry height="24" width="275.59" x="122.20999999999998" y="492.125" as="geometry" />
+        </mxCell>
+        <mxCell id="q9eOkGF9zpHcCmRi929c-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontFamily=Verdana;labelBackgroundColor=none;fillColor=#FF0000;fontColor=#FFFFFF;labelBorderColor=none;strokeColor=#FFFFFF;fontStyle=2;opacity=60;" value="Kernel" vertex="1">
+          <mxGeometry height="24" width="70.866" x="223.2279" y="427.95189999999997" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
